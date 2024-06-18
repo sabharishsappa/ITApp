@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
-function OtherSources() {
+function OtherSources(
+    // props
+    { otherSources, setOtherSources }
+) {
 
     // Other Sources
     const [interestFromSB, setInterestFromSB] = useState('');
     const [interestFromFD, setInterestFromFD] = useState('');
     const [otherSourceIncome, setOtherSourceIncome] = useState('');
-    const [otherSources, setOtherSources] = useState(0);
 
     // Function to update the other sources total
     function updateOtherSources() {

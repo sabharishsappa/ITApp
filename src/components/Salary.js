@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
-function Salary() {
+function Salary(
+    // props
+    { salary, setSalary }
+) {
 
     // Salary Components
     const [basicAndDA, setBasicAndDA] = useState('');
@@ -8,7 +11,6 @@ function Salary() {
     const [bonusAndCommission, setBonusAndCommission] = useState('');
     const [otherAllowance, setOtherAllowance] = useState('');
 
-    const [salary, setSalary] = useState(0);
 
     // Function to update the salary
     function updateSalary(){

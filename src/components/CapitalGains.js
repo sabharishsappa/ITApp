@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 
-function CapitalGains() {
+function CapitalGains(
+    // props
+    { capitalGains, setCapitalGains }
+) {
 
     // Capital Gains Components
     const [STCG, setSTCG] = useState('');
     const [STCG15, setSTCG15] = useState('');
     const [LTCG10, setLTCG10] = useState('');
     const [LTCG20, setLTCG20] = useState('');
-    const [capitalGains, setCapitalGains] = useState(0);
 
     // Function to update the capital gains total
     function updateCapitalGains() {

@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 
-function BusinessAndProfession() {
+function BusinessAndProfession(
+    // props
+    { businessAndProfession, setBusinessAndProfession }
+) {
 
     // Business and Profession Components
     const [business, setBusiness] = useState('');
     const [profession, setProfession] = useState('');
-    const [businessAndProfession, setBusinessAndProfession] = useState(0);
 
     // Function to update the business and profession total
     function updateBusinessAndProfession() {
