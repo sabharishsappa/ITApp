@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import EightyC from './EightyC';
+import EligibleHRAExemption from './EligibleHRAExemption';
 
 const ExemptionsAndDeductions = (
     {exemptionsAndDeductions, setExemptionsAndDeductions}
@@ -29,9 +30,38 @@ const ExemptionsAndDeductions = (
     const [eightyGG, setEightyGG] = useState(0);
     const [eightyTTB, setEightyTTB] = useState(0);
 
+
+    function onStandardDeductionChange(e) {
+        setStandardDeduction(e.target.value);
+    }
+
+    function onEightyTTAChange(e) {
+        setEightyTTA(e.target.value);
+    }
+
     return (
+
+       
+
+
         <div>
             <EightyC eightyC={eightyC} setEightyC={setEightyC}/>
+            <div>
+                <label> Standard Deduction</label>
+                <input type='number' value={standardDeduction} id='standardDeduction' name='standardDeduction' onChange={onStandardDeductionChange}
+                 placeholder="0"></input>
+            </div>
+
+            <div>
+                <label> 80TTA</label>
+                <input type='number' value={eightyTTA} id='eightyTTA' name='eightyTTA' onChange={onStandardDeductionChange}
+                 placeholder="0"></input>
+            </div>
+            <EligibleHRAExemption eligibleHRAExemption={eligibleHRAExemption} setEligibleHRAExemption={setEligibleHRAExemption}/>
+
+            <div>
+
+            </div>
         </div>
     );
 };
