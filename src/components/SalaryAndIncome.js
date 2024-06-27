@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import Salary from "./Salary";
-import BusinessAndProfession from "./BusinessAndProfessions";
-import CapitalGains from "./CapitalGains";
-import OtherSources from "./OtherSources";
+import Salary from "./SalaryAndExemptions/Salary";
+import BusinessAndProfession from "./SalaryAndExemptions/BusinessAndProfessions";
+import CapitalGains from "./SalaryAndExemptions/CapitalGains";
+import OtherSources from "./SalaryAndExemptions/OtherSources";
 
 
 

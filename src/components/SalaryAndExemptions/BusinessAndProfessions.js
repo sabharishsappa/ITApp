@@ -23,11 +23,17 @@ function BusinessAndProfession(
     }, [business, profession]);
 
     function onBusinessChange(e) {
-        setBusiness(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setBusiness(value);
+        }
     }
 
     function onProfessionChange(e) {
-        setProfession(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setProfession(value);
+        }
     }
 
     return (
@@ -36,7 +42,7 @@ function BusinessAndProfession(
             <div>
                 <label>Business</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={business} 
                     id='business' 
                     name='business' 
@@ -47,7 +53,7 @@ function BusinessAndProfession(
             <div>
                 <label>Profession</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={profession} 
                     id='profession' 
                     name='profession' 

@@ -1,9 +1,4 @@
 import { useState, useEffect } from "react";
-import ValueComponent from './components/ValueComponent';
-import Salary from './components/Salary';
-import BusinessAndProfession from './components/BusinessAndProfessions';
-import CapitalGains from './components/CapitalGains';
-import OtherSources from './components/OtherSources';
 import SalaryAndIncome from "./components/SalaryAndIncome";
 import ExemptionsAndDeductions from "./components/ExemptionsAndDeductions";
 

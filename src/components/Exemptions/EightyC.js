@@ -37,35 +37,60 @@ const EightyC = ({ eightyC, setEightyC }) => {
 
 
     const onEquityLinkedSavingsSchemeChange = (e) => {
-        setEquityLinkedSavingsScheme(e.target.value);
+
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setEquityLinkedSavingsScheme(value);
+        }
     }
 
     const onEmployeeProvidentFundChange = (e) => {
-        setEmployeeProvidentFund(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setEmployeeProvidentFund(value);
+        }
     }
 
     const onLifeInsuranceChange = (e) => {
-        setLifeInsurance(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setLifeInsurance(value);
+        }
     }
 
     const onPublicProvidentFundChange = (e) => {
-        setPublicProvidentFund(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setPublicProvidentFund(value);
+        }
     }
 
     const onHousingLoanPrinicpalChange = (e) => {
-        setHousingLoanPrinicpal(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setHousingLoanPrinicpal(value);
+        }
     }
 
     const onNationalPensionSchemeChange = (e) => {
-        setNationalPensionScheme(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setNationalPensionScheme(value);
+        }
     }
 
     const onTutionFeesChange = (e) => {
-        setTutionFees(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setTutionFees(value);
+        }
     }
 
     const onOthersChange = (e) => {
-        setOthers(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setOthers(value);
+        }
     }
     return (
         <>
@@ -74,7 +99,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                 <div>
                     <label>Equity Linked Savings Scheme</label>
                     <input
-                        type='number'
+                        type='text'
                         value={equityLinkedSavingsScheme}
                         id='equityLinkedSavingsScheme'
                         name='equityLinkedSavingsScheme'
@@ -85,7 +110,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                 <div>
                     <label>Employee Provident Fund</label>
                     <input
-                        type='number'
+                        type='text'
                         value={employeeProvidentFund}
                         id='employeeProvidentFund'
                         name='employeeProvidentFund'
@@ -96,7 +121,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                     <div>
                     <label>Life Insurance</label>
                     <input
-                        type='number'
+                        type='text'
                         value={lifeInsurance}
                         id='lifeInsurance'
                         name='lifeInsurance'
@@ -107,7 +132,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                     <div>
                     <label>Public Provident Fund</label>
                     <input
-                        type='number'
+                        type='text'
                         value={publicProvidentFund}
                         id='publicProvidentFund'
                         name='publicProvidentFund'
@@ -118,7 +143,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                     <div>
                     <label>Housing Loan Prinicpal</label>
                     <input
-                        type='number'
+                        type='text'
                         value={housingLoanPrinicpal}
                         id='housingLoanPrinicpal'
                         name='housingLoanPrinicpal'
@@ -129,7 +154,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                     <div>
                     <label>National Pension Scheme</label>
                     <input
-                        type='number'
+                        type='text'
                         value={nationalPensionScheme}
                         id='nationalPensionScheme'
                         name='nationalPensionScheme'
@@ -140,7 +165,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                     <div>
                     <label>Tution Fees</label>
                     <input
-                        type='number'
+                        type='text'
                         value={tutionFees}
                         id='tutionFees'
                         name='tutionFees'
@@ -151,7 +176,7 @@ const EightyC = ({ eightyC, setEightyC }) => {
                     <div>
                     <label>Others</label>
                     <input
-                        type='number'
+                        type='text'
                         value={others}
                         id='others'
                         name='others'

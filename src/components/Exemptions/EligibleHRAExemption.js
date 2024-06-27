@@ -15,11 +15,17 @@ const EligibleHRAExemption = ({eligibleHRAExemption,setEligibleHRAExemption}) =>
     }
 
     function onHraReceivedChange(e) {
-        setHraReceived(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setHraReceived(value);
+        }
     }
 
     function onHouseRentPaidChange(e) {
-        setHouseRentPaid(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setHouseRentPaid(value);
+        }
     }
 
     useEffect(() => {
@@ -33,7 +39,7 @@ const EligibleHRAExemption = ({eligibleHRAExemption,setEligibleHRAExemption}) =>
             <div>
                 <label>HRA Received</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={hraReceived} 
                     id='hraReceived' 
                     name='hraReceived' 
@@ -44,7 +50,7 @@ const EligibleHRAExemption = ({eligibleHRAExemption,setEligibleHRAExemption}) =>
             <div>
                 <label>House Rent Paid</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={houseRentPaid} 
                     id='houseRentPaid' 
                     name='houseRentPaid' 

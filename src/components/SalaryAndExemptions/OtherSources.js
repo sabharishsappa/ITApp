@@ -25,15 +25,24 @@ function OtherSources(
     }, [interestFromSB, interestFromFD, otherSourceIncome]);
 
     function onInterestFromSBChange(e) {
-        setInterestFromSB(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setInterestFromSB(value);
+        }
     }
 
     function onInterestFromFDChange(e) {
-        setInterestFromFD(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setInterestFromFD(value);
+        }
     }
 
     function onOtherSourceIncomeChange(e) {
-        setOtherSourceIncome(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setOtherSourceIncome(value);
+        }
     }
 
     return (
@@ -42,7 +51,7 @@ function OtherSources(
             <div>
                 <label>Interest from Savings Bank Accounts</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={interestFromSB} 
                     id='interestFromSB' 
                     name='interestFromSB' 
@@ -53,7 +62,7 @@ function OtherSources(
             <div>
                 <label>Interest from Fixed Deposits</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={interestFromFD} 
                     id='interestFromFD' 
                     name='interestFromFD' 
@@ -64,7 +73,7 @@ function OtherSources(
             <div>
                 <label>Other Sources</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={otherSourceIncome} 
                     id='otherSourceIncome' 
                     name='otherSourceIncome' 

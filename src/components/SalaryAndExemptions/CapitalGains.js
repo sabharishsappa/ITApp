@@ -27,19 +27,31 @@ function CapitalGains(
     }, [STCG, STCG15, LTCG10, LTCG20]);
 
     function onSTCGChange(e) {
-        setSTCG(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setSTCG(value);
+        }
     }
 
     function onSTCG15Change(e) {
-        setSTCG15(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setSTCG15(value);
+        }
     }
 
     function onLTCG10Change(e) {
-        setLTCG10(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setLTCG10(value);
+        }
     }
 
     function onLTCG20Change(e) {
-        setLTCG20(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setLTCG20(value);
+        }
     }
 
     return (
@@ -48,7 +60,7 @@ function CapitalGains(
             <div>
                 <label>Short Term Capital Gain - Taxable at Normal Rates</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={STCG} 
                     id='STCG' 
                     name='STCG' 
@@ -59,7 +71,7 @@ function CapitalGains(
             <div>
                 <label>Short Term Capital Gain - Taxable at 15%</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={STCG15} 
                     id='STCG15' 
                     name='STCG15' 
@@ -70,7 +82,7 @@ function CapitalGains(
             <div>
                 <label>Long Term Capital Gain - Taxable at 10%</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={LTCG10} 
                     id='LTCG10' 
                     name='LTCG10' 
@@ -81,7 +93,7 @@ function CapitalGains(
             <div>
                 <label>Long Term Capital Gain - Taxable at 20%</label>
                 <input 
-                    type='number' 
+                    type='text' 
                     value={LTCG20} 
                     id='LTCG20' 
                     name='LTCG20' 

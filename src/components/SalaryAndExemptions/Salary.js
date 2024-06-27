@@ -28,19 +28,31 @@ function Salary(
     }, [basicAndDA, HRA, bonusAndCommission, otherAllowance]);
 
     function onBasicAndDAChange(e){
-        setBasicAndDA(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setBasicAndDA(value);
+        }
     }
 
     function onHRAChange(e){
-        setHRA(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setHRA(value);
+        }
     }
 
     function onBonusAndCommissionChange(e){
-        setBonusAndCommission(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setBonusAndCommission(value);
+        }
     }
 
     function onOtherAllowanceChange(e){
-        setOtherAllowance(e.target.value);
+        const value = e.target.value;
+        if (/^\d*\.?\d*$/.test(value)) {
+            setOtherAllowance(value);
+        }
     }
 
     return (
@@ -48,21 +60,21 @@ function Salary(
             <h4>Salary : {salary}</h4>
             <div>
                 <label> Basic + DA (Dearness Allowance)</label>
-                <input type='number' value={basicAndDA} id='basicAndDA' name='basicAndDA' onChange={onBasicAndDAChange} placeholder="0"></input>
+                <input type='text' value={basicAndDA} id='basicAndDA' name='basicAndDA' onChange={onBasicAndDAChange} placeholder="0"></input>
             </div>
             <div>
                 <label> HRA (House Rent Allowance)</label>
-                <input type='number' value={HRA} id='HRA' name='HRA' onChange={onHRAChange} placeholder="0"></input>
+                <input type='text' value={HRA} id='HRA' name='HRA' onChange={onHRAChange} placeholder="0"></input>
             </div>
 
             <div>
                 <label> Bonus and Commission</label>
-                <input type='number' value={bonusAndCommission} id='bonusAndCommission' name='bonusAndCommission' onChange={onBonusAndCommissionChange} placeholder="0"></input>
+                <input type='text' value={bonusAndCommission} id='bonusAndCommission' name='bonusAndCommission' onChange={onBonusAndCommissionChange} placeholder="0"></input>
             </div>
 
             <div>
                 <label> Other Allowance</label>
-                <input type='number' value={otherAllowance} id='otherAllowance' name='otherAllowance' onChange={onOtherAllowanceChange} placeholder="0"></input>
+                <input type='text' value={otherAllowance} id='otherAllowance' name='otherAllowance' onChange={onOtherAllowanceChange} placeholder="0"></input>
             </div>
         </div>
     )
